@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
-// http://localhost:5000/
+// https://new-test-server-two.vercel.app
 
 function App() {
   const [data, setData] = useState([]);
@@ -20,7 +20,7 @@ function App() {
       name
     };
 
-    fetch("http://localhost:5000/users", {
+    fetch("https://new-test-server-two.vercel.app/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -32,7 +32,7 @@ function App() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/users")
+    fetch("https://new-test-server-two.vercel.app/users")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
